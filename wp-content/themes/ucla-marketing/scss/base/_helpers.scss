@@ -1,0 +1,58 @@
+// Body
+
+body {
+	&.page-template-index.has-featured-image, &.page-template-landing.has-featured-image {
+		.c-header:not(.small) {
+			& > .inner {
+				background: none;
+			}
+		}
+	}
+
+	&.admin-bar {
+		.c-header {
+			& > .inner {
+				@media (min-width: 601px) {
+					top: 46px;
+				}
+
+				@media (min-width: 783px) {
+					top: 32px;
+				}
+			}
+		}
+	}
+}
+
+// Container
+
+.container {
+	@include container-padding();
+
+	@include container(var(--default-container));
+
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Focus
+
+html.focus-visible {
+	:focus:not(.focus-visible):not(input):not(textarea):not(select) {
+		outline: 0;
+	}
+}
+
+// Screen reader only
+
+.sr-only {
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+}

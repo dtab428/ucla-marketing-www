@@ -1,0 +1,326 @@
+h2, h3, h4, h5, h6 {
+	color: var(--theme);
+	margin-top: 1.5em;
+	margin-bottom: var(--block-margin-small);
+	line-height: 1.2;
+}
+
+p {
+	&:not(.is-style-ingress) {
+		@include block-margin-small();
+	}
+
+	&.is-style-ingress {
+		font-size: em(24px);
+		text-align: center;
+	}
+}
+
+ul, ol {
+	line-height: 1.6;
+
+	@include block-margin-small();
+
+	li {
+		font-size: rem(19px);
+		margin-left: 2rem;
+		padding-left: .5rem;
+
+		&::marker {
+			color: var(--theme);
+		}
+	}
+
+	ul, ol {
+		margin: .5rem 0;
+	}
+}
+
+code {
+	background: #eee;
+}
+
+figcaption {
+	@include caption();
+}
+
+// Image
+.wp-block-image {
+	@include block-margin();
+}
+
+// Quotes
+.wp-block-quote, .wp-block-pullquote {
+	@include block-margin();
+
+	p {
+		color: var(--theme);
+		font-size: em(25px);
+		line-height: 1.4;
+		margin-top: 0;
+	}
+
+	cite, .wp-block-quote__citation, .wp-block-pullquote__citation {
+		font-style: normal;
+		font-size: em(19px);
+		text-transform: none;
+	}
+}
+
+.wp-block-quote {
+	border-left: 2px solid var(--theme);
+	padding-left: 1.5em !important;
+}
+
+.wp-block-pullquote {
+	border-top: 2px solid var(--theme);
+	border-bottom: 2px solid var(--theme);
+
+	blockquote {
+		margin: 0;
+		padding: 0 1.5em;
+	}
+}
+
+// Columns
+.wp-block-columns {
+	@include block-margin();
+
+	.wp-block-column {
+		margin-bottom: 2em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		& > :first-child {
+			margin-top: 0;
+		}
+
+		& > :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Table
+.wp-block-table {
+	overflow-y: hidden;
+	font-size: 1em;
+
+	@include block-margin();
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	thead {
+		border-bottom: none;
+	}
+
+	tfoot {
+		border-top: none;
+
+		td {
+			border-top: 1px solid var(--dark);
+		}
+	}
+
+	td, th {
+		padding: 1em;
+		border: none;
+		border: 1px solid #ddd;
+	}
+
+	th {
+		text-align: left;
+		background: var(--theme);
+		color: #fff;
+		font-weight: 400;
+		border-color: var(--theme);
+	}
+}
+
+// Buttons
+.wp-block-buttons {
+	@include block-margin-small();
+
+	.wp-block-button {
+		&.is-style-outline {
+			.wp-block-button__link {
+				background: none;
+				border-color: var(--theme);
+				color: var(--theme);
+
+				&:hover {
+					background: var(--dark);
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.wp-block-button__link {
+		@include button();
+	}
+}
+
+// Group
+.wp-block-group {
+	@include block-margin();
+
+	.wp-block-group__inner-container {
+		background: var(--gray);
+		padding-top: var(--block-margin);
+		padding-bottom: var(--block-margin);
+
+		@include container-padding();
+
+		h2, h3, h4 {
+			margin-bottom: var(--block-margin-small);
+		}
+
+		& > :first-child {
+			margin-top: 0;
+		}
+
+		& > :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// File
+.wp-block-file {
+	font-size: 1em;
+
+	@include block-margin();
+
+	a, .wp-block-file__textlink {
+		color: var(--dark);
+		text-decoration: none;
+
+		&:first-of-type {
+			margin-right: 1.5em;
+			color: var(--theme);
+		}
+	}
+
+	.wp-block-file__button {
+		@include button();
+
+		opacity: 1 !important;
+		margin-left: 0;
+
+		@media (max-width: $small-max) {
+			margin-top: 1em;
+		}
+	}
+}
+
+// Media text
+.wp-block-media-text {
+	@include block-margin();
+
+	@media (max-width: $medium-max) {
+		display: block;
+	}
+
+	.wp-block-media-text__content {
+		& > :first-child {
+			margin-top: 0;
+		}
+
+		& > :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.wp-block-media-text__media {
+		margin: 0 0 2em 0;
+
+		@media (min-width: $large) {
+			margin: 0;
+		}
+	}
+}
+
+// Gallery
+.wp-block-gallery {
+	@include block-margin();
+
+	ul {
+		width: 100%;
+		margin: 0;
+
+		li {
+			padding-left: 0;
+			margin-left: 0;
+		}
+
+		& + figcaption {
+			width: 100%;
+		}
+	}
+}
+
+// Cover
+.wp-block-cover {
+	width: auto;
+
+	@include block-margin();
+
+	@include container-padding();
+
+	p {
+		line-height: 1.4;
+
+		@include container(var(--container));
+	}
+}
+
+// Separator
+.wp-block-separator {
+	@include block-margin();
+
+	border: none;
+	background: var(--theme);
+	height: 1px;
+}
+
+// Social links
+.wp-block-social-links {
+	@include block-margin();
+
+	li {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	a {
+		color: var(--light);
+	}
+
+	&:not(.is-style-logos-only) {
+		.wp-social-link {
+			background: var(--theme);
+		}
+	}
+}
+
+// Code
+.wp-block-code {
+	padding: 1em;
+	background: #eee;
+	border-radius: 0;
+	border: none;
+
+	@include block-margin-small();
+}
+
+// Embed
+
+.wp-block-embed {
+	@include block-margin();
+}

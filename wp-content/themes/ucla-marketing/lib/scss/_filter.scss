@@ -1,0 +1,29 @@
+// Filter
+
+.c-filter {
+	margin-bottom: 1em;
+	display: flex;
+
+	button {
+		border: 1px solid var(--theme);
+		background: none;
+		padding: 1em;
+		margin: 0;
+		color: var(--theme);
+
+		&.active {
+			background: var(--theme);
+			color: var(--light);
+		}
+	}
+}
+
+// Target
+
+.c-filter-items {
+	& > div {
+		&.hidden {
+			display: none;
+		}
+	}
+}

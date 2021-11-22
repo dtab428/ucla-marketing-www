@@ -1,0 +1,46 @@
+// Typography
+
+body {
+	font-family: var(--font-regular);
+	color: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1;
+	margin: 0 0 .5em 0;
+}
+
+h1 {
+	font-size: em(39px);
+}
+
+h2 {
+	font-size: em(33px);
+}
+
+h3 {
+	font-size: em(27px);
+}
+
+h4 {
+	font-size: em(23px);
+}
+
+h5 {
+	font-size: em(20px);
+}
+
+h6 {
+	font-size: em(18px);
+}
+
+p {
+	font-size: em(19px);
+	line-height: 1.6;
+	margin: 1.5em 0;
+}
+
+a {
+	color: var(--theme);
+}

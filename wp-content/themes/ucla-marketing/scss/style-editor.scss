@@ -1,0 +1,37 @@
+// Abstracts
+@import "abstracts/functions";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base
+@import "base/base";
+@import "base/typography";
+@import "base/grid";
+
+// Layout
+@import "layout/blocks";
+
+:root {
+	--header-height: 0;
+}
+
+.wp-block {
+	max-width: var(--container);
+
+	&[data-align="wide"] {
+		max-width: var(--container-wide);
+	}
+
+	&[data-align="full"] {
+		max-width: none;
+	}
+}
+
+.editor-post-title__block {
+	.editor-post-title__input {
+		font-family: var(--font-regular);
+		font-weight: 400;
+		font-size: rem(58px);
+		text-align: center;
+	}
+}

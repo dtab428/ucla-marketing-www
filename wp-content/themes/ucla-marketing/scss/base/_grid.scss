@@ -1,0 +1,123 @@
+@use "sass:math";
+
+// Grid variables
+
+$grid-gutter: 0;
+$grid-columns: 12;
+
+// Grid
+
+@mixin column($value, $props: null) {
+	$gutter: gutter-to-pct($grid-gutter);
+	$block: false;
+	$css: true;
+	$ratio: ratio-value($value);
+	$calc: false;
+
+	@if($props) {
+		// Add css properties (internal)
+		@if(map-has-key($props, css)) {
+			$css: map-get($props, css);
+		}
+
+		// Gutter
+		@if(map-has-key($props, gutter)) {
+			$gutter: gutter-to-pct(map-get($props, gutter));
+		}
+
+		// Blocks
+		@if(map-has-key($props, blocks)) {
+			$block: true;
+
+			@include block-props($value, $gutter, $props);
+		}
+
+		@if(map-has-key($props, calc)) {
+			$calc: map-get($props, calc);
+		}
+
+		// Offset
+		@if(map-has-key($props, offset)) {
+			@include offset(map-get($props, offset), (gutter: $gutter));
+		}
+
+		// Push
+		@if(map-has-key($props, push)) {
+			@include push(map-get($props, push), (gutter: $gutter));
+		}
+
+		// Pull
+		@if(map-has-key($props, pull)) {
+			@include pull(map-get($props, pull), (gutter: $gutter));
+		}
+	}
+
+	@include column-props($ratio, $gutter, $css, $block, $calc);
+}
+
+@mixin column-props($ratio, $gutter, $css, $block, $calc) {
+	@if($css) {
+		@if($block == false) {
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	$width: column-width($ratio, $gutter);
+
+	// flex: 0 0 $width;
+	width: $width;
+	margin-right: $gutter;
+}
+
+@mixin block($value, $props: null) {
+	$new-map: null;
+
+	@if($props) {
+		$new-map: map-merge($props, (blocks: $value, css: true));
+	}
+	@else {
+		$new-map: (blocks: $value);
+	}
+
+	@include column(math.div($grid-columns, $value), $new-map);
+}
+
+@mixin block-props($value, $gutter, $props) {
+	&:nth-of-type(n) {
+		margin-right: $gutter;
+	}
+
+	&:nth-of-type(#{math.div($grid-columns, $value)}n) {
+		margin-right: 0;
+	}
+}
+
+// Order
+
+@mixin push($value, $props: null) {
+	$gutter: $grid-gutter;
+
+	@if($props) {
+		@if(map-has-key($props, gutter)) {
+			$gutter: gutter-to-pct(map-get($props, gutter));
+		}
+	}
+
+	position: relative;
+	left: column-ratio2($value, gutter-to-pct($gutter));
+}
+
+@mixin pull($value, $props: null) {
+	$gutter: $grid-gutter;
+
+	@if($props) {
+		@if(map-has-key($props, gutter)) {
+			$gutter: gutter-to-pct(map-get($props, gutter));
+		}
+	}
+
+	position: relative;
+	right: column-ratio2($value, gutter-to-pct($gutter));
+}

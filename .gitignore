@@ -9,7 +9,7 @@
 
 # ignore all mu-plugins, plugins, and themes
 # unless explicitly whitelisted at the end of this file
-wp-content/themes/*
+# wp-content/themes/*
 
 # ignore index.php in plugins folder
 wp-content/plugins/index.php
