@@ -28,9 +28,10 @@
 		"> 0.5%, last 2 versions, not dead"
 	],
 	"scripts": {
-        "build": "gulp build && npm run --prefix ../../plugins/fiesta-blocks build",
+		"build": "gulp build && npm run --prefix ../../plugins/fiesta-blocks build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
-	"license": "ISC"
+	"license": "ISC",
+	"dependencies": {}
 }
