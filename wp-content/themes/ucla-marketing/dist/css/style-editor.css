@@ -1,6 +1,6 @@
 :root {
   --font-regular: "Source Sans Pro", sans-serif;
-  --theme: #522dd7;
+  --theme: #2774ae;
   --dark: #222;
   --light: #fff;
   --gray: #f2f2f3;
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  background: #000;
+  background: #fff;
   margin: 0;
   font: 1rem/1 sans-serif;
 }
@@ -144,12 +144,12 @@ p {
 }
 
 a {
-  color: #522dd7;
+  color: #2774ae;
   color: var(--theme);
 }
 
 h2, h3, h4, h5, h6 {
-  color: #522dd7;
+  color: #2774ae;
   color: var(--theme);
   margin-top: 1.5em;
   margin-bottom: 1.5rem;
@@ -181,7 +181,7 @@ ul li, ol li {
   padding-left: 0.5rem;
 }
 ul li::marker, ol li::marker {
-  color: #522dd7;
+  color: #2774ae;
   color: var(--theme);
 }
 ul ul, ul ol, ol ul, ol ol {
@@ -216,7 +216,7 @@ figcaption {
   margin-bottom: var(--block-margin);
 }
 .wp-block-quote p, .wp-block-pullquote p {
-  color: #522dd7;
+  color: #2774ae;
   color: var(--theme);
   font-size: 1.5625em;
   line-height: 1.4;
@@ -229,15 +229,15 @@ figcaption {
 }
 
 .wp-block-quote {
-  border-left: 2px solid #522dd7;
+  border-left: 2px solid #2774ae;
   border-left: 2px solid var(--theme);
   padding-left: 1.5em !important;
 }
 
 .wp-block-pullquote {
-  border-top: 2px solid #522dd7;
+  border-top: 2px solid #2774ae;
   border-top: 2px solid var(--theme);
-  border-bottom: 2px solid #522dd7;
+  border-bottom: 2px solid #2774ae;
   border-bottom: 2px solid var(--theme);
 }
 .wp-block-pullquote blockquote {
@@ -293,11 +293,11 @@ figcaption {
 }
 .wp-block-table th {
   text-align: left;
-  background: #522dd7;
+  background: #2774ae;
   background: var(--theme);
   color: #fff;
   font-weight: 400;
-  border-color: #522dd7;
+  border-color: #2774ae;
   border-color: var(--theme);
 }
 
@@ -309,9 +309,9 @@ figcaption {
 }
 .wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link {
   background: none;
-  border-color: #522dd7;
+  border-color: #2774ae;
   border-color: var(--theme);
-  color: #522dd7;
+  color: #2774ae;
   color: var(--theme);
 }
 .wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link:hover {
@@ -325,9 +325,9 @@ figcaption {
   padding: 0.7em 2em;
   text-transform: uppercase;
   text-decoration: none;
-  background: #522dd7;
+  background: #2774ae;
   background: var(--theme);
-  border: 1px solid #522dd7;
+  border: 1px solid #2774ae;
   border: 1px solid var(--theme);
   margin-bottom: 0;
   color: #fff;
@@ -391,7 +391,7 @@ figcaption {
 }
 .wp-block-file a:first-of-type, .wp-block-file .wp-block-file__textlink:first-of-type {
   margin-right: 1.5em;
-  color: #522dd7;
+  color: #2774ae;
   color: var(--theme);
 }
 .wp-block-file .wp-block-file__button {
@@ -400,9 +400,9 @@ figcaption {
   padding: 0.7em 2em;
   text-transform: uppercase;
   text-decoration: none;
-  background: #522dd7;
+  background: #2774ae;
   background: var(--theme);
-  border: 1px solid #522dd7;
+  border: 1px solid #2774ae;
   border: 1px solid var(--theme);
   margin-bottom: 0;
   color: #fff;
@@ -499,7 +499,7 @@ figcaption {
   margin-bottom: 3.125rem;
   margin-bottom: var(--block-margin);
   border: none;
-  background: #522dd7;
+  background: #2774ae;
   background: var(--theme);
   height: 1px;
 }
@@ -519,7 +519,7 @@ figcaption {
   color: var(--light);
 }
 .wp-block-social-links:not(.is-style-logos-only) .wp-social-link {
-  background: #522dd7;
+  background: #2774ae;
   background: var(--theme);
 }
 
