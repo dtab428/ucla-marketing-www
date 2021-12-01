@@ -1,11 +1,11 @@
 <?php
 
-namespace Fiesta;
+namespace ucla;
 
 /* Widgets */
 
-add_action('widgets_init', function() {
-	register_sidebar( array(
+add_action('widgets_init', function () {
+	register_sidebar(array(
 		'name' => __('Footer'),
 		'id' => 'footer-widget',
 		'before_widget' => '',

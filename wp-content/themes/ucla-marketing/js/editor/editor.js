@@ -1,4 +1,4 @@
-wp.domReady(function() {
+wp.domReady(function () {
 	// Remove editor styles
 	wp.blocks.unregisterBlockStyle('core/image', 'rounded');
 	wp.blocks.unregisterBlockStyle('core/quote', 'large');
@@ -18,24 +18,24 @@ wp.domReady(function() {
 // Filter block alignment options
 wp.hooks.addFilter(
 	'blocks.registerBlockType',
-	'fiesta/block-alignment',
-	function(settings, name) {
+	'ucla/block-alignment',
+	function (settings, name) {
 		var align;
 		var defaultAlign;
 
-		switch(name) {
+		switch (name) {
 			case 'core/gallery':
 				align = ['wide', 'full'];
 				defaultAlign = 'full';
-			break;
+				break;
 			case 'core/columns':
 				align = ['wide', 'full'];
 				defaultAlign = 'wide';
-			break;
+				break;
 			case 'core/cover':
 				align = ['wide', 'full'];
 				defaultAlign = 'full';
-			break;
+				break;
 			default:
 				return settings;
 		}

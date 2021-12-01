@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiesta;
+namespace ucla;
 
 /* Custom Post types */
 

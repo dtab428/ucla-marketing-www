@@ -1,15 +1,22 @@
-// Typography
+@include font-face("Apfel Grotezk", "../fonts/ApfelGrotezk-Regular", 100, normal);
+@include font-face("Apfel Grotezk", "../fonts/ApfelGrotezk-Fett", 200, normal);
 
+// Typography
 
 body {
 	font-family: var(--font-regular);
 	color: var(--dark);
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 100;
 	line-height: 1;
-	margin: 0 0 .5em 0;
+	margin: 0 0 0.5em 0;
 }
 
 h1 {

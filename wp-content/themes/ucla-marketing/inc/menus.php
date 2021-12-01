@@ -1,10 +1,10 @@
 <?php
 
-namespace Fiesta;
+namespace ucla;
 
 /* Menus */
 
-add_action('after_setup_theme', function() {
+add_action('after_setup_theme', function () {
 	register_nav_menus(array(
 		'primary'  => __('Main Menu'),
 	));

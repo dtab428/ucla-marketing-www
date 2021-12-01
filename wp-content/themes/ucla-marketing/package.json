@@ -1,5 +1,5 @@
 {
-	"name": "fiesta",
+	"name": "ucla",
 	"version": "1.0.0",
 	"description": "",
 	"private": true,
@@ -28,10 +28,12 @@
 		"> 0.5%, last 2 versions, not dead"
 	],
 	"scripts": {
-		"build": "gulp build && npm run --prefix ../../plugins/fiesta-blocks build",
+		"build": "gulp build && npm run --prefix ../../plugins/ucla-blocks build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
 	"license": "ISC",
-	"dependencies": {}
+	"dependencies": {
+		"@wordpress/create-block": "^2.7.0"
+	}
 }

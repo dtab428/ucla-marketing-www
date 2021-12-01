@@ -1,11 +1,11 @@
 <?php
 
-namespace Fiesta;
+namespace ucla;
 
 
 /* Constants */
 
-const PREFIX = 'fiesta';
+const PREFIX = 'ucla';
 
 
 /* Functions */
@@ -13,11 +13,12 @@ const PREFIX = 'fiesta';
 /**
  * Gets an array of pages by template name
  */
-function get_pages_by_template($template) {
+function get_pages_by_template($template)
+{
 	$pages = get_posts(array(
 		'post_type' => 'page',
 		'meta_key' => '_wp_page_template',
-		'meta_value' => $template.'.php'
+		'meta_value' => $template . '.php'
 	));
 
 	return $pages;
@@ -26,25 +27,27 @@ function get_pages_by_template($template) {
 /**
  * Gets a menu item by post id
  */
-function get_menu_item_by_post($post_id, $menu) {
+function get_menu_item_by_post($post_id, $menu)
+{
 	$menu_item = null;
 	$nav = wp_get_nav_menu_items($menu);
 
-	foreach($nav as $item) {
-		if($post_id == $item->object_id) {
+	foreach ($nav as $item) {
+		if ($post_id == $item->object_id) {
 			$menu_item = $item;
 			break;
 		}
 	}
 
-    return $menu_item;
+	return $menu_item;
 }
 
 /**
  * Returns Polylang string translation. Falls back to __()
  */
-function __($string, $domain = null) {
-	if(function_exists('pll__')) {
+function __($string, $domain = null)
+{
+	if (function_exists('pll__')) {
 		return pll__($string);
 	}
 
@@ -54,8 +57,9 @@ function __($string, $domain = null) {
 /**
  * Echoes Polylang string translation. Falls back to _e()
  */
-function _e($string, $domain = null) {
-	if(function_exists('pll_e')) {
+function _e($string, $domain = null)
+{
+	if (function_exists('pll_e')) {
 		return pll_e($string);
 	}
 

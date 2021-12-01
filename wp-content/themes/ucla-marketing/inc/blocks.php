@@ -1,10 +1,10 @@
 <?php
 
-namespace Fiesta;
+namespace ucla;
 
 /* Allowed Block types */
 
-add_filter('allowed_block_types_all', function($allowed_block_types, $block_editor_context) {
+add_filter('allowed_block_types_all', function ($allowed_block_types, $block_editor_context) {
 	return array(
 		'core/block',
 		'core/audio',

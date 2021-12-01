@@ -1,6 +1,6 @@
 <?php
 
-namespace Fiesta;
+namespace ucla;
 
 get_header(); ?>
 

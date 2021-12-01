@@ -1,5 +1,5 @@
 module.exports = {
-	devUrl: function() {
-		return "http://fiesta.local";
+	devUrl: function () {
+		return "http://ucla.local";
 	}
 }

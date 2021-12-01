@@ -1,8 +1,8 @@
-# fiesta-wordpress-starter
+# ucla-wordpress-starter
 
-Fiesta is a lightweight, modern, Gutenberg-friendly WordPress starter theme for lightning-fast development.
+ucla is a lightweight, modern, Gutenberg-friendly WordPress starter theme for lightning-fast development.
 
-See also: [fiesta-blocks](https://github.com/jsaarine/fiesta-blocks) WordPress container plugin for dynamic blocks.
+See also: [ucla-blocks](https://github.com/jsaarine/ucla-blocks) WordPress container plugin for dynamic blocks.
 
 ## Features
 

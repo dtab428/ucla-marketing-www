@@ -1,10 +1,10 @@
 <?php
 
-namespace Fiesta;
+namespace ucla;
 
 /* Theme setup */
 
-add_action('after_setup_theme', function() {
+add_action('after_setup_theme', function () {
 	// Enable Gutenberg styles
 	add_theme_support('editor-styles');
 
@@ -47,10 +47,10 @@ add_action('after_setup_theme', function() {
 	remove_theme_support('core-block-patterns');
 });
 
-add_filter('body_class', function($classes) {
+add_filter('body_class', function ($classes) {
 	global $post;
 
-	if(isset($post->ID) && get_the_post_thumbnail($post->ID)) {
+	if (isset($post->ID) && get_the_post_thumbnail($post->ID)) {
 		$classes[] = 'has-featured-image';
 	}
 

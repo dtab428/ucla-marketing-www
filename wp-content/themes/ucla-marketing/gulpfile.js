@@ -36,14 +36,14 @@ const script = () => {
 		}))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./dist/js'))
-		.pipe(browserSync.stream({match: '**/*.js'}));
+		.pipe(browserSync.stream({ match: '**/*.js' }));
 };
 
 const watch = () => {
 	browserSync.init({
 		files: [
 			'./**/*.php',
-			'../../plugins/fiesta-blocks/src/**/*.php',
+			'../../plugins/ucla-blocks/src/**/*.php',
 		],
 		proxy: devUrl,
 		open: false,
@@ -52,7 +52,7 @@ const watch = () => {
 		},
 	});
 
-	gulp.watch(['./scss/**/*.scss', './lib/scss/**/*.scss', '../../plugins/fiesta-blocks/src/**/*.scss'], gulp.series(style));
+	gulp.watch(['./scss/**/*.scss', './lib/scss/**/*.scss', '../../plugins/ucla-blocks/src/**/*.scss'], gulp.series(style));
 	gulp.watch(['./js/**/*.js', './lib/js/**/*.js'], gulp.series(script));
 };
 
