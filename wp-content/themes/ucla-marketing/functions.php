@@ -66,12 +66,12 @@ function _e($string, $domain = null)
 	return \_e($string, $domain);
 }
 
-// require_once('inc/assets.php');
+require_once('inc/assets.php');
 // require_once('inc/blocks.php');
-// require_once('inc/menus.php');
-// require_once('inc/post-types.php');
-// require_once('inc/reset.php');
-// require_once('inc/setup.php');
-// require_once('inc/taxonomies.php');
-// require_once('inc/translations.php');
-// require_once('inc/widgets.php');
+require_once('inc/menus.php');
+require_once('inc/post-types.php');
+require_once('inc/reset.php');
+require_once('inc/setup.php');
+require_once('inc/taxonomies.php');
+require_once('inc/translations.php');
+require_once('inc/widgets.php');
