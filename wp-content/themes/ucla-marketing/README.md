@@ -1,8 +1,6 @@
 # ucla-wordpress-starter
 
-ucla is a lightweight, modern, Gutenberg-friendly WordPress starter theme for lightning-fast development.
-
-See also: [ucla-blocks](https://github.com/jsaarine/ucla-blocks) WordPress container plugin for dynamic blocks.
+This "theme" is a lightweight, modern, Gutenberg-friendly WordPress "starter theme" for lightning-fast development.
 
 ## Features
 
