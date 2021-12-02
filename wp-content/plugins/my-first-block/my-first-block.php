@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Testing
+ * Plugin Name:       My First Block
  * Description:       Example block written with ESNext standard and JSX support – build step required.
  * Requires at least: 5.8
  * Requires PHP:      7.0
@@ -8,7 +8,7 @@
  * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       testing
+ * Text Domain:       my-first-block
  *
  * @package           create-block
  */
@@ -20,7 +20,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/
  */
-function create_block_testing_block_init() {
+function create_block_my_first_block_block_init() {
 	register_block_type( __DIR__ );
 }
-add_action( 'init', 'create_block_testing_block_init' );
+add_action( 'init', 'create_block_my_first_block_block_init' );

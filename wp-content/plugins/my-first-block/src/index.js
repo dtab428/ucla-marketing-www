@@ -25,7 +25,7 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType('create-block/testing', {
+registerBlockType('create-block/my-first-block', {
 	/**
 	 * @see ./edit.js
 	 */

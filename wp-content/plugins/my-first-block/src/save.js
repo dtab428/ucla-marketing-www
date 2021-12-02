@@ -25,7 +25,10 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save() {
 	return (
 		<p {...useBlockProps.save()}>
-			{__('Testing – hello from the saved content!', 'testing')}
+			{__(
+				'My First Block – hello from the saved content!',
+				'my-first-block'
+			)}
 		</p>
 	);
 }
