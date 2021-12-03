@@ -24,8 +24,10 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save() {
 	return (
-		<p {...useBlockProps.save()}>
-			{__('Swiper – hello from the saved content!!', 'swiper')}
-		</p>
+		<div>
+			<p {...useBlockProps.save()}>
+				{__('Swiper – hello from thee saved content!', 'swiper')}
+			</p>
+		</div>
 	);
 }

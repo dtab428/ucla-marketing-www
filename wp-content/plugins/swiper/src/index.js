@@ -26,9 +26,6 @@ import save from './save';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType('create-block/swiper', {
-	attributes: {
-		category: 'text',
-	},
 	/**
 	 * @see ./edit.js
 	 */
@@ -37,5 +34,5 @@ registerBlockType('create-block/swiper', {
 	/**
 	 * @see ./save.js
 	 */
-	save
+	save,
 });

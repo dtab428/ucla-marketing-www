@@ -32,7 +32,8 @@ import './editor.scss';
 export default function Edit() {
 	return (
 		<p {...useBlockProps()}>
-			{__('Swiper – hello from the editor?!', 'swiper')}
+			{__('Swiper – hello from the editor!', 'swiper')}
 		</p>
+
 	);
 }
